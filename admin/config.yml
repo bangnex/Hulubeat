@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+    - name: "beats"
+    label: "Beat Portofolio"
+    folder: "content/beats"
+    create: true
+    slug: "{{slug}}"
+    fields:
+            - { label: "Judul Beat", name: "title", widget: "string" }
+            - { label: "Genre", name: "genre", widget: "select", options: ["future-bass", "game-ost", "rap", "religi"] }
+            - { label: "Label Genre", name: "label", widget: "string" }
+            - { label: "Cover Image", name: "cover", widget: "image" }
+            - { label: "File MP3", name: "mp3", widget: "file" }
+            - { label: "Deskripsi", name: "desc", widget: "text" }
+            - { label: "Tahun", name: "year", widget: "string" }
+            - { label: "Tag 1", name: "tag1", widget: "string", default: "Producer" }
+            - { label: "Tag 2", name: "tag2", widget: "string" }
+            - { label: "Tag 3", name: "tag3", widget: "string" }
+            - { label: "Teks CTA", name: "cta_text", widget: "string", default: "Tanya Beat Mirip Ini" }
+            - { label: "Link WhatsApp CTA", name: "cta_link", widget: "string" }
+            - { label: "Highlight CTA", name: "cta_highlight", widget: "boolean", default: false }
