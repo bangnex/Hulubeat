@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Hulubeat - Game OST & Beat Producer</title>
+    <meta name="description" content="Dengar portofolio Hulubeat: Game OST, Future Bass, Pop Electronic. Custom beat & mixing mastering untuk musisi & game dev.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+     .neon-text { background: linear-gradient(90deg, #00D4FF 0%, #FF2E9F 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+     .neon-border { position: relative; background: #0a0a0a; border-radius: 1rem; }
+     .neon-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 1rem;
+            padding: 1px;
+            background: linear-gradient(90deg, #00D4FF, #FF2E9F);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+     .neon-gradient { background: linear-gradient(90deg, #00D4FF 0%, #7B2FFF 50%, #FF2E9F 100%); }
+     .glow { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+        html { scroll-behavior: smooth; }
+        audio::-webkit-media-controls-panel { background: #1f2937; }
+        audio::-webkit-media-controls-play-button { background-color: #00D4FF; border-radius: 50%; }
+
+        /* LIGHT MODE OVERRIDES */
+        html:not(.dark) body { background: #f5f5f5; color: #111; }
+        html:not(.dark).neon-border { background: #ffffff; }
+        html:not(.dark).bg-gray-900\/50 { background: rgba(255,255,255,0.9); backdrop-filter: blur(8px); }
+        html:not(.dark).bg-gray-800 { background: #e5e7eb; }
+        html:not(.dark).text-gray-300 { color: #374151; }
+        html:not(.dark).text-gray-400 { color: #6b7280; }
+        html:not(.dark).text-white { color: #111; }
+        html:not(.dark).border-gray-800 { border-color: #e5e7eb; }
+        html:not(.dark) nav { background: rgba(255,255,255,0.8); }
+        html:not(.dark).fixed.bottom-0 > div { background: rgba(255,255,255,0.9); }
+        html:not(.dark).glow { box-shadow: 0 0 20px rgba(0, 212, 255, 0.2); }
+        html:not(.dark) input { background: #fff; color: #111; border-color: #d1d5db; }
+    
+      .hidden { display:none!important; }
+
+        /* HuluBeat Icon - GLOW DIHAPUS */
+      .mobile-menu a i{
+            background: linear-gradient(135deg, #22d3ee 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all.3s ease;
+        }
+     </style>
+</head>
+<body class="bg-[#F8F9FA] dark:bg-[#0a0a0a] text-gray-800 dark:text-white transition-colors duration-300">
+    <nav class="fixed w-full z-[60] bg-[#F8F9FA]/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-300 dark:border-gray-800">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html"><h1 class="text-2xl font-bold neon-text">HB</h1></a>
+                <div class="space-x-6 hidden md:block">
+                    <a href="sejarah.html" class="hover:text-cyan-400 transition">Sejarah</a>
+                    <a href="layanan.html" class="hover:text-cyan-400 transition">Layanan</a>
+                    <a href="lisensi.html" class="hover:text-cyan-400 transition">Lisensi</a>
+                    <a href="portofolio.html" class="text-cyan-400">Portofolio</a>
+                    <a href="kontak.html" class="hover:text-cyan-400 transition">Kontak</a>
+                    <a href="faq.html" class="hover:text-cyan-400 transition">Faq</a>
+                </div>
+
+                <button id="mobileMenuBtn" class="md:hidden text-cyan-400 z-[70]">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU - SPACE DIRAPETIN -->
+        <div id="mobileMenu" class="mobile-menu hidden md:hidden absolute top-full left-0 w-full bg-[#0a0a0a]/95 backdrop-blur-md shadow-2xl pb-4 z-[65]">
+            <div class="px-6 pt-4">
+                <p class="text-xs uppercase tracking-wider text-gray-500 mb-2">Menu</p>
+                <div class="space-y-0">
+                    <a href="index.html" class="flex items-center gap-3 px-3 py-1.5 rounded-lg hover:bg-cyan-400/10 hover:text-cyan-400 transition">
+                        <i class="fas fa-house w-5"></i>
+                        <span>Beranda</span>
+                    </a>
+                    <a href="sejarah.html" class="flex items-center gap-3 px-3 py-1.5 rounded-lg hover:bg-cyan-400/10 hover:text-cyan-400 transition">
+                        <i class="fas fa-book-open w-5"></i>
+                        <span>Sejarah</span>
+                    </a>
+                    <a href="layanan.html" class="flex items-center gap-3 px-3 py-1.5 rounded-lg hover:bg-cyan-400/10 hover:text-cyan-400 transition">
+                        <i class="fas fa-briefcase w-5"></i>
+                        <span>Layanan</span>
+                    </a>
+                </div>
+                <p class="text-xs uppercase tracking-wider text-gray-500 mb-2 mt-4">Karya</p>
+                <div class="space-y-0">
+                    <a href="Store/Store.html" class="flex items-center gap-3 px-3 py-1.5 rounded-lg hover:bg-cyan-400/10 hover:text-cyan-400 transition">
+                        <i class="fas fa-store w-5"></i>
+                        <span>Hulubeat Store</span>
+                    </a>
+                    <a href="portofolio.html" class="flex items-center gap-3 px-3 py-1.5 rounded-lg bg-cyan-400/10 text-cyan-400">
+                        <i class="fas fa-folder-open w-5"></i>
+                        <span>Portofolio</span>
+                    </a>
+                    <a href="blog.html" class="flex items-center gap-3 px-3 py-1.5 rounded-lg hover:bg-cyan-400/10 hover:text-cyan-400 transition">
+                        <i class="fas fa-pen-nib w-5"></i>
+                        <span>Blog</span>
+                    </a>
+                </div>
+                <p class="text-xs uppercase tracking-wider text-gray-500 mb-2 mt-4">Bantuan</p>
+                <div class="space-y-0">
+                    <a href="faq.html" class="flex items-center gap-3 px-3 py-1.5 rounded-lg hover:bg-cyan-400/10 hover:text-cyan-400 transition">
+                        <i class="fas fa-circle-question w-5"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <a href="kontak.html" class="flex items-center gap-3 px-3 py-1.5 rounded-lg hover:bg-cyan-400/10 hover:text-cyan-400 transition">
+                        <i class="fas fa-envelope w-5"></i>
+                        <span>Kontak</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <div class="pt-8 px-4 pb-32">
+            <div class="max-w-5xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-black mb-3 text-center neon-text">Beat Portofolio</h1>
+                <p class="text-center text-gray-400 mb-8">Project yang udah gue produserin. Tap gambar buat dengerin</p>
+
+                <div class="max-w-md mx-auto mb-8">
+                    <input id="searchBeat" type="text" placeholder="Cari judul atau genre beat..." class="w-full bg-gray-900/50 border border-gray-700 rounded-full px-5 py-2.5 text-sm focus:outline-none focus:border-cyan-400 transition">
+                </div>
+
+                <div class="flex justify-center gap-2 mb-12 flex-wrap">
+                    <button class="filter-btn px-4 py-2 rounded-full bg-[#00D4FF] text-black text-sm font-semibold" data-filter="all">All</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-700 text-sm hover:border-cyan-400 transition" data-filter="future-bass">Future Bass</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-700 text-sm hover:border-cyan-400 transition" data-filter="game-ost">Game OST</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-700 text-sm hover:border-cyan-400 transition" data-filter="rap">Rap</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-700 text-sm hover:border-cyan-400 transition" data-filter="religi">Religi</button>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8" id="project-grid">
+                      <!-- PROJECT 1 -->
+                <div class="project-card neon-border p-6 bg-gray-900/50" data-genre="future-bass">
+                    <div class="relative bg-gray-800 h-48 rounded-lg mb-4 overflow-hidden group">
+                        <img src="kandangan.jpg" alt="Indahnya Kota Kandangan" class="w-full h-full object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <div class="w-14 h-14 rounded-full neon-gradient flex items-center justify-center cursor-pointer play-trigger">
+                                <i class="fas fa-play text-xl text-black"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-black neon-gradient">Future Bass</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Indahnya Kota Kandangan V2 Future bass</h3>
+                    <audio controls class="w-full mb-3 h-10 rounded-lg">
+                        <source src="kandangan.mp3" type="audio/mpeg">
+                    </audio>
+                    <p class="text-gray-400 mb-4 text-sm">Produseri 3 track utama di video film kandangan. Genre Future Bass + R&B. Cocok buat intro cinematic.</p>
+                    <div class="flex gap-2 flex-wrap mb-4">
+                        <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs">Producer</span>
+                        <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">2025</span>
+                        <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs">Sony Music</span>
+                    </div>
+                    <a href="https://wa.me/6283822256240?text=Mau%20tanya%20beat%20kayak%20Kota%20Kabut" target="_blank" class="block text-center py-2.5 rounded-lg border border-gray-700 text-sm font-bold hover:bg-gray-800 transition">
+                        <i class="fab fa-whatsapp mr-1"></i> Tanya Beat Mirip Ini
+                    </a>
+                    <p class="text-xs text-gray-500 text-center mt-2">Respon < 1 jam</p>
+                </div>
+
+                  <!-- PROJECT 2 -->
+<div class="project-card neon-border p-6 bg-gray-900/50" data-genre="rap">
+    <div class="relative bg-gray-800 h-48 rounded-lg mb-4 overflow-hidden group">
+        <img src="cover-siapa-yang-benar.jpg" alt="Siapa Yang Benar Siapa Yang Salah" class="w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <div class="w-14 h-14 rounded-full neon-gradient flex items-center justify-center cursor-pointer play-trigger">
+                <i class="fas fa-play text-xl text-black"></i>
+            </div>
+        </div>
+        <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-black neon-gradient">Rap Modern</div>
+    </div>
+    <h3 class="text-xl font-bold mb-2">Single "Siapa Yang Benar Siapa Yang Salah"</h3>
+    <audio controls class="w-full mb-3 h-10 rounded-lg">
+        <source src="siapa yang benar siapa salah.mp3" type="audio/mpeg">
+    </audio>
+    <p class="text-gray-400 mb-4 text-sm">Lagu Rap Modern tentang dilema & realita mahasiswa. Kritik sosial + beat trap 808. Rilis 2026.</p>
+    <div class="flex gap-2 flex-wrap mb-4">
+        <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs">Producer</span>
+        <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">2026</span>
+        <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs">Conscious Rap</span>
+    </div>
+    <a href="https://wa.me/6283822256240?text=Mau%20tanya%20beat%20rap%20mahasiswa%20kayak%20Siapa%20Yang%20Benar" target="_blank" class="block text-center py-2.5 rounded-lg neon-gradient text-black text-sm font-bold hover:scale-105 transition">
+        <i class="fab fa-whatsapp mr-1"></i> Konsultasi Beat Rap Gratis
+    </a>
+    <p class="text-xs text-gray-500 text-center mt-2">Gratis untuk 15 menit pertama</p>
+</div>
+
+                
+                <!-- PROJECT 3 -->
+<div class="project-card neon-border p-6 bg-gray-900/50" data-genre="religi">
+    <div class="relative bg-gray-800 h-48 rounded-lg mb-4 overflow-hidden group">
+        <img src="cover-terbang-tinggi.jpg" alt="Masa OSABA" class="w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <div class="w-14 h-14 rounded-full neon-gradient flex items-center justify-center cursor-pointer play-trigger">
+                <i class="fas fa-play text-xl text-black"></i>
+            </div>
+        </div>
+        <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-black neon-gradient">Religi</div>
+    </div>
+    <h3 class="text-xl font-bold mb-2">Single "Masa OSABA" - Muhammad Hanafi</h3>
+    <audio controls class="w-full mb-3 h-10 rounded-lg">
+        <source src="Masa OSABA.mp3" type="audio/mpeg">
+    </audio>
+    <p class="text-gray-400 mb-4 text-sm">Produser + Mixing Mastering. Religi anthemic. Single 2026.</p>
+    <div class="flex gap-2 flex-wrap mb-4">
+        <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs">Producer</span>
+        <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">2026</span>
+        <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs">Religi</span>
+    </div>
+    <a href="https://wa.me/6283822256240?text=Mau%20mixing%20kayak%20Masa%20OSABA" target="_blank" class="block text-center py-2.5 rounded-lg border border-gray-700 text-sm font-bold hover:bg-gray-800 transition">
+        <i class="fab fa-whatsapp mr-1"></i> Tanya Mixing
+    </a>
+</div>         
+
+                    <!-- PROJECT 4 -->
+                <div class="project-card neon-border p-6 bg-gray-900/50" data-genre="future-bass">
+                    <div class="relative bg-gray-800 h-48 rounded-lg mb-4 overflow-hidden group">
+                        <img src="cover-neon-borneo.jpg" alt="Beat Pack Neon Borneo" class="w-full h-full object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <div class="w-14 h-14 rounded-full neon-gradient flex items-center justify-center cursor-pointer play-trigger">
+                                <i class="fas fa-play text-xl text-black"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-black neon-gradient">Beat Pack</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Beat Pack "Borneo Beat Pack Vol.1"</h3>
+                    <audio controls class="w-full mb-3 h-10 rounded-lg">
+                        <source src="beat-neon-borneo.mp3" type="audio/mpeg">
+                    </audio>
+                    <p class="text-gray-400 mb-4 text-sm">10 Beat Future Bass ready to use. 30+ loop & stems. Dipake rapper Indo & Malaysia.</p>
+                    <div class="flex gap-2 flex-wrap mb-4">
+                        <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs">Mulai 500rb</span>
+                        <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">2025</span>
+                        <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs">50+ Sold</span>
+                    </div>
+                    
+<a href="layanan.html" class="block text-center py-2.5 rounded-lg neon-gradient text-black text-sm font-bold hover:scale-105 transition relative z-10">
+    <i class="fas fa-shopping-cart mr-1"></i> Lihat Lisensi & Harga
+</a>
+                </div>
+
+                    <div class="project-card neon-border p-6 bg-gray-900/50" data-genre="game-ost">
+                        <div class="relative bg-gray-800 h-48 rounded-lg mb-4 overflow-hidden group">
+                            <img src="Ostgame.jpg" alt="OST Game XYZ" class="w-full h-full object-cover" loading="lazy" width="400" height="300">
+                            <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                <div class="w-14 h-14 rounded-full neon-gradient flex items-center justify-center cursor-pointer play-trigger">
+                                    <i class="fas fa-play text-xl text-black"></i>
+                                </div>
+                            </div>
+                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-black neon-gradient">Game OST</div>
+                        </div>
+                       <h3 class="text-xl font-bold mb-2">Beat Pack "Ost Game v.1"</h3>
+                    <audio controls class="w-full mb-3 h-10 rounded-lg">
+                        <source src="topeng di balik tawa.mp3" type="audio/mpeg">
+                        </audio>
+                        <p class="text-gray-400 mb-4 text-sm">Compose 5 track buat indie game PC. Epic orchestral + glitch. Rilis Steam 2026.</p>
+                        <div class="flex gap-2 flex-wrap mb-4">
+                            <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs">Composer</span>
+                            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">2026</span>
+                            <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs">Game OST</span>
+                        </div>
+                        <a href="https://wa.me/6283822256240?text=Mau%20OST%20kayak%20Legends%20of%20Borneo" target="_blank" class="block text-center py-2.5 rounded-lg border border-gray-700 text-sm font-bold hover:bg-gray-800 transition">
+                            <i class="fab fa-whatsapp mr-1"></i> Tanya OST Game
+                        </a>
+                        <p class="text-xs text-gray-500 text-center mt-2">Respon < 1 jam</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16">
+                    <p class="text-gray-400 mb-6">Suka style beat gua?</p>
+                    <a href="layanan.html" class="px-8 py-4 rounded-full font-bold text-black hover:scale-105 transition inline-block glow" style="background: linear-gradient(90deg, #00D4FF 0%, #7B2FFF 50%, #FF2E9F 100%);">
+                        <i class="fas fa-fire mr-2"></i> Bikin Beat Custom
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-6 text-center text-gray-500 text-sm pb-28">
+        <p>© <script>document.write(new Date().getFullYear())</script> Hulubeat. Made in Kalimantan</p>
+        <div class="flex items-center justify-center gap-2 text-xs text-zinc-600 mt-1">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Hulu Sungai Selatan, Kalimantan Selatan</span>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+        <div class="bg-black/90 backdrop-blur-lg border-t border-gray-800 px-4 pt-3 pb-5 rounded-t-3xl">
+            <div class="grid grid-cols-5 gap-2">
+                <a href="index.html" class="flex flex-col items-center text-gray-500 hover:text-cyan-400 transition">
+                    <i class="fas fa-home text-lg mb-1"></i>
+                    <span class="text-xs">Home</span>
+                </a>
+                <a href="sejarah.html" class="flex flex-col items-center text-gray-500 hover:text-cyan-400 transition">
+                    <i class="fas fa-book text-lg mb-1"></i>
+                    <span class="text-xs">Sejarah</span>
+                </a>
+                <a href="#" id="temaBtn" class="flex flex-col items-center text-gray-400 hover:text-cyan-400 transition">
+                    <i class="fas fa-moon text-lg mb-1"></i>
+                    <span class="text-xs">Tema</span>
+                </a>
+                <a href="portofolio.html" class="flex flex-col items-center text-cyan-400">
+                    <i class="fas fa-folder text-lg mb-1"></i>
+                    <span class="text-xs">Portofolio</span>
+                </a>
+                <a href="kontak.html" class="flex flex-col items-center text-gray-500 hover:text-cyan-400 transition">
+                    <i class="fas fa-envelope text-lg mb-1"></i>
+                    <span class="text-xs">Kontak</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if (localStorage.theme === 'light') {
+            document.documentElement.classList.remove('dark');
+        }
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.innerHTML = mobileMenu.classList.contains('hidden') 
+             ? '<i class="fas fa-bars text-xl"></i>' 
+                : '<i class="fas fa-times text-xl"></i>';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) &&!mobileMenuBtn.contains(e.target) &&!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+            }
+        });
+
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+            });
+        });
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        const searchInput = document.getElementById('searchBeat');
+        let activeFilter = 'all';
+
+        function filterProjects() {
+            const keyword = searchInput.value.toLowerCase();
+            projectCards.forEach(card => {
+                const genre = card.getAttribute('data-genre');
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const desc = card.querySelector('p').textContent.toLowerCase();
+                const matchFilter = activeFilter === 'all' || genre === activeFilter;
+                const matchSearch = title.includes(keyword) || desc.includes(keyword);
+                card.style.display = matchFilter && matchSearch? 'block' : 'none';
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                activeFilter = btn.getAttribute('data-filter');
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-[#00D4FF]', 'text-black');
+                    b.classList.add('border', 'border-gray-700');
+                });
+                btn.classList.add('bg-[#00D4FF]', 'text-black');
+                btn.classList.remove('border', 'border-gray-700');
+                filterProjects();
+            });
+        });
+
+        searchInput.addEventListener('input', filterProjects);
+
+        
+                document.querySelectorAll('audio').forEach(audio => {
+    audio.addEventListener('play', function() {
+        document.querySelectorAll('audio').forEach(other => {
+            if (other !== this) {
+                other.pause();
+            }
+        });
+    });
+});
+        
+document.querySelectorAll('.play-trigger').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const audio = this.closest('.project-card').querySelector('audio');
+                const source = audio.querySelector('source');
+                if (!source.src && source.dataset.src) {
+                    source.src = source.dataset.src;
+                    audio.load();
+                }
+                document.querySelectorAll('audio').forEach(a => { if (a!== audio) a.pause(); });
+                audio.paused? audio.play() : audio.pause();
+            });
+        });
+
+        document.querySelectorAll('audio').forEach(audio => {
+            const btn = audio.closest('.project-card').querySelector('.play-trigger');
+            audio.addEventListener('play', () => { btn.innerHTML = '<i class="fas fa-pause text-xl text-black"></i>'; });
+            audio.addEventListener('pause', () => { btn.innerHTML = '<i class="fas fa-play text-xl text-black"></i>'; });
+            audio.addEventListener('ended', () => { btn.innerHTML = '<i class="fas fa-play text-xl text-black"></i>'; });
+        });
+        document.getElementById('temaBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.documentElement.classList.toggle('dark');
+            localStorage.theme = document.documentElement.classList.contains('dark')? 'dark' : 'light';
+        });
+    </script>
+</body>
+</html>
