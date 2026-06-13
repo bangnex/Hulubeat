@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+    - name: "beats"
+    label: "Beat Portofolio"
+    folder: "_beats"
+    create: true
+    slug: "{{slug}}"
+    fields:
+            - {label: "Judul Beat", name: "title", widget: "string"}
+            - {label: "Cover", name: "thumbnail", widget: "image"}
+            - {label: "File Audio", name: "audio", widget: "file"}
+            - {label: "BPM", name: "bpm", widget: "number"}
+            - {label: "Key", name: "key", widget: "string"}
+            - {label: "Deskripsi", name: "body", widget: "markdown"}
