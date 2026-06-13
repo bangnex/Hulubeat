@@ -13,9 +13,9 @@ collections:
     slug: "{{slug}}"
     fields:
             - {label: "Judul Beat", name: "title", widget: "string"}
-            - {label: "Cover", name: "thumbnail", widget: "image"}
+            - {label: "Cover", name: "cover", widget: "image"}
             - {label: "File Audio", name: "audio", widget: "file"}
             - {label: "BPM", name: "bpm", widget: "number"}
             - {label: "Key", name: "key", widget: "string"}
-            - {label: "Genre", name: "genre", widget: "select", options: ["future-bass", "game-ost", "rap", "religi"]}
+            - {label: "Genre", name: "genre", widget: "select", options: ["trap", "future-bass", "hip-hop", "lo-fi"]}
             - {label: "Deskripsi", name: "body", widget: "markdown"}
