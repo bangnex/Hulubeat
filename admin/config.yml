@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+    - name: "beats"
+    label: "Beat Portofolio"
+    file: "data/beats.json"
+    fields:
+            - label: "List Beat"
+        name: "beats"
+        widget: "list"
+        fields:
+                    - {label: "Judul Beat", name: "title", widget: "string"}
+                    - {label: "Cover Beat", name: "thumbnail", widget: "image"}
+                    - {label: "File Audio MP3", name: "audio", widget: "file"}
+                    - {label: "BPM", name: "bpm", widget: "number", value_type: "int"}
+                    - {label: "Key", name: "key", widget: "string"}
+                    - {label: "Genre", name: "genre", widget: "select", options: ["future-bass", "game-ost", "rap", "religi", "hip-hop", "lo-fi"]}
+                    - {label: "Deskripsi", name: "body", widget: "text"}
