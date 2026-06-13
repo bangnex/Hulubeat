@@ -17,4 +17,5 @@ collections:
             - {label: "File Audio", name: "audio", widget: "file"}
             - {label: "BPM", name: "bpm", widget: "number"}
             - {label: "Key", name: "key", widget: "string"}
+            - {label: "Genre", name: "genre", widget: "select", options: ["future-bass", "game-ost", "rap", "religi"]}
             - {label: "Deskripsi", name: "body", widget: "markdown"}
