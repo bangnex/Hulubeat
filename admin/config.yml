@@ -7,17 +7,13 @@ public_folder: "/assets/uploads"
 
 collections:
     - name: "beats"
-    label: "Beat Portofolio"
-    file: "data/beats.json"
+    label: "Beats"
+    folder: "_beats"
+    create: true
+    slug: "{{slug}}"
     fields:
-            - label: "List Beat"
-        name: "beats"
-        widget: "list"
-        fields:
-                    - {label: "Judul Beat", name: "title", widget: "string"}
-                    - {label: "Cover Beat", name: "thumbnail", widget: "image"}
-                    - {label: "File Audio MP3", name: "audio", widget: "file"}
-                    - {label: "BPM", name: "bpm", widget: "number", value_type: "int"}
-                    - {label: "Key", name: "key", widget: "string"}
-                    - {label: "Genre", name: "genre", widget: "select", options: ["future-bass", "game-ost", "rap", "religi", "hip-hop", "lo-fi"]}
-                    - {label: "Deskripsi", name: "body", widget: "text"}
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Audio", name: "audio", widget: "file"}
+            - {label: "Cover", name: "cover", widget: "image", required: false}
+            - {label: "Price", name: "price", widget: "string", default: "50k"}
+            - {label: "Body", name: "body", widget: "markdown"}
